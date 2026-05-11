@@ -20,5 +20,11 @@ public class Main {
         main.test2 = ObjectAssertions.with("test", test).isNotNullReturn();
 
         System.out.println(main.test2);
+
+        ObjectAssertions.with("test", test).isNotNull().getValue();
+
+
+        Test testObj = new Test("20");
+        System.out.printf(testObj.toString());
     }
 }

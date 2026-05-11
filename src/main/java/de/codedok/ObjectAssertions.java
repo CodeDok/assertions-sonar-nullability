@@ -30,4 +30,10 @@ public class ObjectAssertions<T> {
         }
         return value;
     }
+
+    public @NonNull T getValue() {
+        isNotNull();
+        assert value != null;
+        return value;
+    }
 }
