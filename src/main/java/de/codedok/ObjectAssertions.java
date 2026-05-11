@@ -1,5 +1,6 @@
 package de.codedok;
 
+import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
 
 public class ObjectAssertions<T> {
@@ -21,5 +22,12 @@ public class ObjectAssertions<T> {
             throw new AssertionError("Value is null");
         }
         return this;
+    }
+
+    public @NonNull T isNotNullReturn() {
+        if (value == null) {
+            throw new AssertionError("Value is null");
+        }
+        return value;
     }
 }
