@@ -26,7 +26,7 @@ public class ObjectAssertions<T> {
 
     public @NonNull T isNotNullReturn() {
         if (value == null) {
-            throw new AssertionError("Value is null");
+            throw new AssertionError("Value is null for " + propertyName);
         }
         return value;
     }
